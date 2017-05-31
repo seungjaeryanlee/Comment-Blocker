@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Comment Blocker",
+  "description": "This extension blocks comments",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch?v*"],
+      "css": ["css/youtube.css"]
+    }
+  ]
+}
