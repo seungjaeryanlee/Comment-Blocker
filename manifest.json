@@ -11,27 +11,29 @@
   },
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "<all_urls>"
   ],
   "background": {
+    "persistent": false,
     "scripts": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/watch?v*"],
-      "css": ["css/youtube.css"]
+      "js": ["js/youtube.js"]
     },
     {
       "matches": ["*://mangapark.me/manga/*"],
-      "css": ["css/mangapark.css"]
+      "js": ["js/mangapark.js"]
     },
     {
       "matches": ["*://*.naver.com/*"],
-      "css": ["css/naver.css"]
+      "js": ["js/naver.js"]
     },
     {
       "matches": ["*://*.facebook.com/*"],
-      "css": ["css/facebook.css"]
+      "js": ["js/facebook.js"]
     }
   ]
 }
