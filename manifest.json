@@ -10,8 +10,12 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/watch?v*"],
@@ -27,7 +31,7 @@
     },
     {
       "matches": ["*://*.facebook.com/*"],
-      "css": ["css/facebook .css"]
+      "css": ["css/facebook.css"]
     }
   ]
 }
